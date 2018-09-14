@@ -1,8 +1,19 @@
 <resources>
+    <!--- Encabezado barra -->
     <string name="app_name">Informed City</string>
+
+    <!--- Ventana InicioSesion -->
     <string name="app_login">Inicio de sesión</string>
     <string name="app_sign_up">Registrarse</string>
     <string name="app_sign_in">Ingresar</string>
     <string name="app_email_login">Ingrese su correo</string>
     <string name="app_password_login">Ingrese su contraseña</string>
+
+    <!--- Direccion consultas -->
+    <string name="comentario_evento_actual">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/comment_current_events</string>
+    <string name="comentario_evento_futuro">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/comment_future_events</string>
+    <string name="evento_actual">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/current_events</string>
+    <string name="evento_futuro">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/future_events</string>
+    <string name="reportes_evento_actual">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/report_current_events</string>
+    <string name="reportes_evento_futuro">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/report_future_events</string>
 </resources>
