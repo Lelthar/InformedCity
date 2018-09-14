@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Informed City</string>
+    <string name="app_login">Inicio de sesión</string>
+    <string name="app_sign_up">Registrarse</string>
+    <string name="app_sign_in">Ingresar</string>
+    <string name="app_email_login">Ingrese su correo</string>
+    <string name="app_password_login">Ingrese su contraseña</string>
+</resources>

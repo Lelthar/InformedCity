@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">InformedCity</string>
+    <string name="app_name">Informed City</string>
+    <string name="app_login">Login</string>
+    <string name="app_sign_up">Sign up</string>
+    <string name="app_sign_in">Sign in</string>
+    <string name="app_email_login">email</string>
+    <string name="app_password_login">password</string>
 </resources>

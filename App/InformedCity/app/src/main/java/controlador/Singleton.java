@@ -1,6 +1,4 @@
-package Controlador;
-
-import android.content.Context;
+package controlador;
 
 /**
  * Created by gerald on 13/09/18.

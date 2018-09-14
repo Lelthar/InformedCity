@@ -1,4 +1,4 @@
-package Controlador;
+package controlador;
 
 /**
  * Created by gerald on 13/09/18.
