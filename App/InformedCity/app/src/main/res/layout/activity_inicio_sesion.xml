@@ -28,7 +28,8 @@
                 android:text="@string/app_login"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="30sp"
+                android:textStyle="normal" />
 
             <EditText
                 android:id="@+id/email_login"
@@ -64,7 +65,8 @@
                 android:layout_marginTop="104dp"
                 android:background="@color/colorButtons"
                 android:text="@string/app_sign_in"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/sign_up_button"
@@ -72,11 +74,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/sign_in_button"
                 android:layout_below="@+id/sign_in_button"
-                android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
                 android:background="@color/colorButtons"
                 android:text="@string/app_sign_up"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
