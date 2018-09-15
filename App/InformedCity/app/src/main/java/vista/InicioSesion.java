@@ -1,7 +1,6 @@
 package vista;
 
-import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +22,7 @@ public class InicioSesion extends AppCompatActivity {
     private EditText correoEditText;
     private EditText passwordEditText;
     private Button btnIniciarSesion;
+    private Button btnRegistrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,7 @@ public class InicioSesion extends AppCompatActivity {
         correoEditText = findViewById(R.id.email_login);
         passwordEditText = findViewById(R.id.password_login);
         btnIniciarSesion = findViewById(R.id.sign_in_button);
+        btnRegistrar = findViewById(R.id.sign_up_button);
 
         btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +51,14 @@ public class InicioSesion extends AppCompatActivity {
 
             }
         });
+
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intente = new Intent(getApplicationContext(), MenuPrincipal.class);
+                startActivity(intente);
+            }
+        });
     }
 
     public void iniciarSesion() throws InterruptedException, ExecutionException, JSONException {
@@ -58,7 +67,9 @@ public class InicioSesion extends AppCompatActivity {
         dtoInicioSesion.setPassword(passwordEditText.getText().toString());
 
         if (Singleton.getInstance().getControlador().getGestorUsuarios().inicioSesion(dtoInicioSesion)) {
-            Toast.makeText(this,"Correcto",Toast.LENGTH_LONG) .show();
+            //Toast.makeText(this,"Correcto",Toast.LENGTH_LONG) .show();
+
+
         } else {
             Toast.makeText(this,"Incorrecto",Toast.LENGTH_LONG) .show();
         }
