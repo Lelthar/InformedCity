@@ -1,5 +1,7 @@
 package controlador;
 
+import android.content.Context;
+
 import com.example.gerald.informedcity.modelo.Evento;
 import com.example.gerald.informedcity.modelo.Usuario;
 
@@ -17,6 +19,7 @@ public class Controlador {
     private GestorEventos gestorEventos;
     private GestorMapa gestorMapa;
     private GestorUsuarios gestorUsuarios;
+    private Context context;
 
     public Controlador() {
        setUsuario(new Usuario());
@@ -26,6 +29,14 @@ public class Controlador {
        setGestorEventos(new GestorEventos());
        setGestorMapa(new GestorMapa());
        setGestorUsuarios(new GestorUsuarios());
+    }
+
+    public Context getContext() {
+        return context;
+    }
+
+    public void setContext(Context context) {
+        this.context = context;
     }
 
     public GestorEventos getGestorEventos() {

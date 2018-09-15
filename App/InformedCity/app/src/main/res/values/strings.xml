@@ -16,5 +16,6 @@
     <string name="evento_futuro">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/future_events</string>
     <string name="reportes_evento_actual">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/report_current_events</string>
     <string name="reportes_evento_futuro">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/report_future_events</string>
+    <string name="user_login">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/auth/sign_in</string>
 
 </resources>
