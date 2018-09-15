@@ -1,8 +1,6 @@
 package vista;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.gerald.informedcity.MenuPrincipal;
 import com.example.gerald.informedcity.R;
 
 import org.json.JSONException;
@@ -70,7 +67,9 @@ public class InicioSesion extends AppCompatActivity {
         dtoInicioSesion.setPassword(passwordEditText.getText().toString());
 
         if (Singleton.getInstance().getControlador().getGestorUsuarios().inicioSesion(dtoInicioSesion)) {
-            Toast.makeText(this,"Correcto",Toast.LENGTH_LONG) .show();
+            //Toast.makeText(this,"Correcto",Toast.LENGTH_LONG) .show();
+
+
         } else {
             Toast.makeText(this,"Incorrecto",Toast.LENGTH_LONG) .show();
         }

@@ -14,14 +14,27 @@ public class Evento {
     private String descripcion;
     private Date fechaPublicacion;
     private String posicionX;
-    private String getPosicionY;
+    private String posicionY;
     private ArrayList<Comentario> comentarios;
     private String  tipo;
     private int reportes;
     private int verificaciones;
 
     public Evento() {
+        idEvento=-1;
+        nombre="";
+        categoria="";
+        descripcion="";
+        fechaPublicacion=null;
+        posicionX="";
+        posicionY="";
+        comentarios = new ArrayList<>();
+        tipo="";
+        reportes=0;
+        verificaciones=0;
     }
+
+
 
     public int getIdEvento() {
         return idEvento;
@@ -71,12 +84,12 @@ public class Evento {
         this.posicionX = posicionX;
     }
 
-    public String getGetPosicionY() {
-        return getPosicionY;
+    public String getPosicionY() {
+        return posicionY;
     }
 
     public void setGetPosicionY(String getPosicionY) {
-        this.getPosicionY = getPosicionY;
+        this.posicionY = getPosicionY;
     }
 
     public ArrayList<Comentario> getComentarios() {

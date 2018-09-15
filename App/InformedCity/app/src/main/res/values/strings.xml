@@ -17,13 +17,22 @@
     <string name="reportes_evento_actual">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/report_current_events</string>
     <string name="reportes_evento_futuro">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/report_future_events</string>
     <string name="user_login">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/auth/sign_in</string>
-    <string name="title_activity_menu_principal">MenuPrincipal</string>
+
+    <!--- Ventana Menu principal -->
+    <string name="title_activity_menu_principal">Informed City</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+
+    <!--- NAV_HEADER -->
     <string name="nav_header_desc">Navigation header</string>
+
     <string name="action_settings">Settings</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="menu_map_event">Map of events</string>
+    <string name="menu_create_current_event">Create current event</string>
+    <string name="menu_create_future_event">Create future event</string>
+    <string name="menu_wall_companies">Wall of companies</string>
+    <string name="menu_about">About</string>
 
 </resources>

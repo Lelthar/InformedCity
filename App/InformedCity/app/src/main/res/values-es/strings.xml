@@ -18,4 +18,12 @@
     <string name="reportes_evento_futuro">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/report_future_events</string>
     <string name="user_login">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/auth/sign_in</string>
 
+    <!--- Ventana Menu principal -->
+    <string name="title_activity_menu_principal">Informed City</string>
+    <string name="menu_map_event">Mapa de eventos</string>
+    <string name="menu_create_current_event">Crear evento actual</string>
+    <string name="menu_create_future_event">Crear evento futuro</string>
+    <string name="menu_wall_companies">Muro de empresas</string>
+    <string name="menu_about">Acerca de</string>
+
 </resources>
