@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import com.example.gerald.informedcity.R;
 
+import controlador.Controlador;
+
 public class InicioSesion extends AppCompatActivity {
 
     @Override
@@ -13,4 +15,6 @@ public class InicioSesion extends AppCompatActivity {
         setContentView(R.layout.activity_inicio_sesion);
 
     }
+
+
 }
