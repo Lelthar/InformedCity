@@ -79,8 +79,8 @@ public class MenuPrincipal extends AppCompatActivity
         textViewUser = hView.findViewById(R.id.textViewUser);
         textViewEmail = hView.findViewById(R.id.textViewEmail);
 
-        textViewUser.setText("Prueba");
-        textViewEmail.setText("PRE");
+        textViewUser.setText(Singleton.getInstance().getControlador().getUsuario().getUserName());
+        textViewEmail.setText(Singleton.getInstance().getControlador().getUsuario().getCorreo());
 
         navigationView.setNavigationItemSelectedListener(this);
 

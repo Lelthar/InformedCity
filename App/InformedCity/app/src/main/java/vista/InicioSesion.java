@@ -67,11 +67,10 @@ public class InicioSesion extends AppCompatActivity {
         dtoInicioSesion.setPassword(passwordEditText.getText().toString());
 
         if (Singleton.getInstance().getControlador().getGestorUsuarios().inicioSesion(dtoInicioSesion)) {
-            //Toast.makeText(this,"Correcto",Toast.LENGTH_LONG) .show();
-
-
+            Intent intent= new Intent(InicioSesion.this, MenuPrincipal.class);
+            startActivity(intent);
         } else {
-            Toast.makeText(this,"Incorrecto",Toast.LENGTH_LONG) .show();
+            Toast.makeText(this,"Datos incorrectos",Toast.LENGTH_LONG) .show();
         }
     }
 
