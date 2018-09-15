@@ -1,6 +1,7 @@
 package vista;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.gerald.informedcity.MenuPrincipal;
 import com.example.gerald.informedcity.R;
 
 import org.json.JSONException;
@@ -23,6 +25,7 @@ public class InicioSesion extends AppCompatActivity {
     private EditText correoEditText;
     private EditText passwordEditText;
     private Button btnIniciarSesion;
+    private Button btnRegistrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class InicioSesion extends AppCompatActivity {
         correoEditText = findViewById(R.id.email_login);
         passwordEditText = findViewById(R.id.password_login);
         btnIniciarSesion = findViewById(R.id.sign_in_button);
+        btnRegistrar = findViewById(R.id.sign_up_button);
 
         btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +52,14 @@ public class InicioSesion extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
+            }
+        });
+
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intente = new Intent(getApplicationContext(), MenuPrincipal.class);
+                startActivity(intente);
             }
         });
     }
