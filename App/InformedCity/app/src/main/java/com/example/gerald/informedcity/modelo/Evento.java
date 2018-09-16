@@ -12,7 +12,7 @@ public class Evento {
     private String nombre;
     private String categoria;
     private String descripcion;
-    private Date fechaPublicacion;
+    private String fechaPublicacion;
     private String posicionX;
     private String posicionY;
     private ArrayList<Comentario> comentarios;
@@ -27,7 +27,7 @@ public class Evento {
         nombre="";
         categoria="";
         descripcion="";
-        fechaPublicacion=null;
+        fechaPublicacion="";
         posicionX="";
         posicionY="";
         comentarios = new ArrayList<>();
@@ -72,11 +72,11 @@ public class Evento {
         this.descripcion = descripcion;
     }
 
-    public Date getFechaPublicacion() {
+    public String getFechaPublicacion() {
         return fechaPublicacion;
     }
 
-    public void setFechaPublicacion(Date fechaPublicacion) {
+    public void setFechaPublicacion(String fechaPublicacion) {
         this.fechaPublicacion = fechaPublicacion;
     }
 

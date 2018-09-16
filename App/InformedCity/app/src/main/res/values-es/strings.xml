@@ -26,4 +26,15 @@
     <string name="menu_wall_companies">Muro de empresas</string>
     <string name="menu_about">Acerca de</string>
 
+    <!--- Ventana Datos Evento -->
+    <string name="event_data_titule">Información de evento</string>
+    <string name="event_data_name">Nombre</string>
+    <string name="event_data_category">Categoria</string>
+    <string name="event_data_report">Reportar</string>
+    <string name="event_data_check">Verificar</string>
+    <string name="event_data_comments">Cometarios</string>
+    <string name="event_data_date_create">Fecha publicación</string>
+    <string name="event_data_date_future">Fecha programada</string>
+    <string name="event_data_description">Descripción</string>
+
 </resources>
