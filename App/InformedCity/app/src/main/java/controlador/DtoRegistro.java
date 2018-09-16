@@ -10,12 +10,21 @@ public class DtoRegistro {
     private String nombre;
     private String apellidos;
     private String userName;
+    private String image;
 
     public DtoRegistro() {
     }
 
     public String getCorreo() {
         return correo;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public void setCorreo(String correo) {

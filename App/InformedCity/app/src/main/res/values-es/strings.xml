@@ -26,4 +26,30 @@
     <string name="menu_wall_companies">Muro de empresas</string>
     <string name="menu_about">Acerca de</string>
 
+    <!--- Ventana Datos Evento -->
+    <string name="event_data_titule">Información de evento</string>
+    <string name="event_data_name">Nombre</string>
+    <string name="event_data_category">Categoria</string>
+    <string name="event_data_report">Reportar</string>
+    <string name="event_data_check">Verificar</string>
+    <string name="event_data_comments">Cometarios</string>
+    <string name="event_data_date_create">Fecha publicación</string>
+    <string name="event_data_date_future">Fecha programada</string>
+    <string name="event_data_description">Descripción</string>
+
+    <!--- Ventana Registro -->
+
+    <string name="app_register">Registro</string>
+    <string name="app_create_account">Registrarme</string>
+    <string name="app_email_register">Ingrese su correo</string>
+    <string name="app_password_register">Ingrese su contraseña</string>
+    <string name="app_repeat_password_register">Confirme su contraseña</string>
+
+    <!--- Ventana Ajustes -->
+    <string name="app_ajustes">Información personal</string>
+    <string name="app_guardar_ajustes">Guardar</string>
+    <string name="app_nombre_ajustes">Nombre</string>
+    <string name="app_apellidos_ajustes">Apellidos</string>
+    <string name="app_nombre_usuario_ajustes">Nombre de Usuario</string>
+
 </resources>

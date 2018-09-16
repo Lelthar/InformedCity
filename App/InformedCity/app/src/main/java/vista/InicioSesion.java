@@ -55,23 +55,32 @@ public class InicioSesion extends AppCompatActivity {
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intente = new Intent(getApplicationContext(), MenuPrincipal.class);
-                startActivity(intente);
+                registro();
             }
         });
     }
 
     public void iniciarSesion() throws InterruptedException, ExecutionException, JSONException {
-        DtoInicioSesion dtoInicioSesion = new DtoInicioSesion();
-        dtoInicioSesion.setCorreo(correoEditText.getText().toString());
-        dtoInicioSesion.setPassword(passwordEditText.getText().toString());
+        if (!correoEditText.getText().toString().equals("") && !passwordEditText.getText().toString().equals("")){
+            DtoInicioSesion dtoInicioSesion = new DtoInicioSesion();
+            dtoInicioSesion.setCorreo(correoEditText.getText().toString());
+            dtoInicioSesion.setPassword(passwordEditText.getText().toString());
 
-        if (Singleton.getInstance().getControlador().getGestorUsuarios().inicioSesion(dtoInicioSesion)) {
-            Intent intent= new Intent(InicioSesion.this, MenuPrincipal.class);
-            startActivity(intent);
+            if (Singleton.getInstance().getControlador().getGestorUsuarios().inicioSesion(dtoInicioSesion)) {
+                Intent intent= new Intent(InicioSesion.this, MenuPrincipal.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(this,"Datos incorrectos",Toast.LENGTH_LONG) .show();
+            }
         } else {
             Toast.makeText(this,"Datos incorrectos",Toast.LENGTH_LONG) .show();
         }
+
+    }
+
+    public void registro() {
+        Intent intent= new Intent(InicioSesion.this, Registro.class);
+        startActivity(intent);
     }
 
     /*

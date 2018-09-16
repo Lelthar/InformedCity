@@ -25,8 +25,43 @@ public class GestorUsuarios {
 
     }
 
-    public boolean registroUsuario(DtoRegistro dtoRegistro) {
+    public boolean registroUsuario(DtoRegistro dtoRegistro) throws JSONException, ExecutionException, InterruptedException {
+        JSONObject jsonParam = new JSONObject();
+        jsonParam.put("email", dtoRegistro.getCorreo());
+        jsonParam.put("password", dtoRegistro.getPassword());
+        String direccion = Singleton.getInstance().getControlador().getContext().getString(R.string.user_register);
+        String tipo = "POST";
+        String resultado = Singleton.getInstance().getControlador().getDaoApi().consultaApi(direccion,tipo,jsonParam);
+
+        if(resultado.equals("OK")) {
+            direccion = Singleton.getInstance().getControlador().getContext().getString(R.string.user_login);
+            DownLoadTask downLoadTask = new DownLoadTask();
+            JSONObject json_user = new JSONObject(downLoadTask.execute(dtoRegistro.getCorreo(),dtoRegistro.getPassword(),direccion).get());
+            json_user = json_user.getJSONObject("data");
+            Singleton.getInstance().getControlador().getUsuario().setIdUsuario(json_user.getInt("id"));
+            Singleton.getInstance().getControlador().getUsuario().setCorreo(json_user.getString("email"));
+            return true;
+        }
         return false;
+    }
+
+    public boolean ajustesCuenta(DtoRegistro dtoRegistro) throws JSONException, ExecutionException, InterruptedException {
+        JSONObject jsonParam = new JSONObject();
+        jsonParam.put("email", Singleton.getInstance().getControlador().getUsuario().getCorreo());
+        jsonParam.put("name", dtoRegistro.getNombre());
+        jsonParam.put("lastname", dtoRegistro.getApellidos());
+        jsonParam.put("nickname", dtoRegistro.getUserName());
+        jsonParam.put("image", dtoRegistro.getImage());
+
+        String direccion = Singleton.getInstance().getControlador().getContext().getString(R.string.users)+"/"+Integer.toString(Singleton.getInstance().getControlador().getUsuario().getIdUsuario());
+        String resultado = Singleton.getInstance().getControlador().getDaoApi().consultaApi(direccion,"PATCH",jsonParam);
+
+        if (resultado.equals("OK")) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 
     public boolean inicioSesion(DtoInicioSesion dtoInicioSesion) throws JSONException, ExecutionException, InterruptedException {
