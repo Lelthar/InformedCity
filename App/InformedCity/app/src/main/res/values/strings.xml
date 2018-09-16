@@ -35,4 +35,15 @@
     <string name="menu_wall_companies">Wall of companies</string>
     <string name="menu_about">About</string>
 
+    <!--- Ventana Datos Evento -->
+    <string name="event_data_titule">Event information</string>
+    <string name="event_data_name">Name</string>
+    <string name="event_data_category">Category</string>
+    <string name="event_data_report">Report</string>
+    <string name="event_data_check">Check</string>
+    <string name="event_data_comments">Comments</string>
+    <string name="event_data_date_create">Publication date</string>
+    <string name="event_data_date_future">Scheduled date</string>
+    <string name="event_data_description">Description</string>
+
 </resources>

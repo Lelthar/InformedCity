@@ -2,15 +2,13 @@ package vista;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.annotation.FloatRange;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -39,11 +37,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 
 import controlador.Singleton;
@@ -174,7 +171,13 @@ public class MenuPrincipal extends AppCompatActivity
             @Override
             public boolean onMarkerClick(Marker arg0) {
                 //Donde se capturan los datos
-
+                String marcaSeleccionada = arg0.getTitle();
+                if(!marcaSeleccionada.equals("Usted está acá")){
+                    Evento evento = buscarEvento(marcaSeleccionada);
+                    Singleton.getInstance().getControlador().getGestorEventos().setEventoSeleccionado(evento);
+                    Intent intent = new Intent(getApplicationContext(), DatosEventos.class);
+                    startActivity(intent);
+                }
                 return false;
             }
         });
@@ -245,13 +248,17 @@ public class MenuPrincipal extends AppCompatActivity
                 }
 
                 LatLng location = new LatLng(lastLocation.getLatitude(), lastLocation.getLongitude());
-                mMap.addMarker(new MarkerOptions().position(location).title("Usted está acá Inicio"));
+                mMap.addMarker(new MarkerOptions().position(location).title("Usted está acá"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 15.5f));
                 //mMap.animateCamera(CameraUpdateFactory.zoomIn());
             }
         } catch (Exception excepcion) {
             Toast.makeText(this, "No se cargo ubicación correctamente.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void verDatosEvento(){
+
     }
 
     public void cargarEventosActuales() {
@@ -289,7 +296,7 @@ public class MenuPrincipal extends AppCompatActivity
                 evento.setVerificaciones(verificacion);
                 evento.setTipo("ACTUAL");
                 evento.setDisponible(disponible);
-                //evento.setFechaPublicacion("fecha");
+                evento.setFechaPublicacion(fecha);
                 listaEventos.add(evento);
 
             }
@@ -339,7 +346,7 @@ public class MenuPrincipal extends AppCompatActivity
                 evento.setDisponible(disponible);
                 evento.setTipo("FUTURO");
                 evento.setFechaProgramada(fechaP);
-                //evento.setFechaPublicacion("fecha");
+                evento.setFechaPublicacion(fecha);
                 listaEventos.add(evento);
 
             }
@@ -351,4 +358,15 @@ public class MenuPrincipal extends AppCompatActivity
             e.printStackTrace();
         }
     }
+
+    public Evento buscarEvento(String evento){
+        for(int i=0;i<listaEventos.size();i++){
+            Evento event = listaEventos.get(i);
+            if(event.getNombre().equals(evento)){
+                return event;
+            }
+        }
+        return  null;
+    }
+
 }
