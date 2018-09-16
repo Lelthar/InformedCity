@@ -6,8 +6,8 @@
     <string name="app_login">Login</string>
     <string name="app_sign_up">Sign up</string>
     <string name="app_sign_in">Sign in</string>
-    <string name="app_email_login">Email</string>
-    <string name="app_password_login">Password</string>
+    <string name="app_email_login">email</string>
+    <string name="app_password_login">password</string>
 
     <!--- Direccion consultas -->
     <string name="comentario_evento_actual">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/comment_current_events</string>
@@ -17,8 +17,6 @@
     <string name="reportes_evento_actual">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/report_current_events</string>
     <string name="reportes_evento_futuro">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/report_future_events</string>
     <string name="user_login">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/auth/sign_in</string>
-    <string name="user_register">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/auth/</string>
-    <string name="users">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/users</string>
 
     <!--- Ventana Menu principal -->
     <string name="title_activity_menu_principal">Informed City</string>
@@ -47,20 +45,5 @@
     <string name="event_data_date_create">Publication date</string>
     <string name="event_data_date_future">Scheduled date</string>
     <string name="event_data_description">Description</string>
-
-    <!--- Ventana Registro -->
-
-    <string name="app_register">Sign up</string>
-    <string name="app_create_account">Create account</string>
-    <string name="app_email_register">Email</string>
-    <string name="app_password_register">Password</string>
-    <string name="app_repeat_password_register">Repeat your password</string>
-
-    <!--- Ventana Ajustes -->
-    <string name="app_ajustes">Personal information</string>
-    <string name="app_guardar_ajustes">Save</string>
-    <string name="app_nombre_ajustes">Name</string>
-    <string name="app_apellidos_ajustes">Lastname</string>
-    <string name="app_nombre_usuario_ajustes">Nickname</string>
 
 </resources>

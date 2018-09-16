@@ -11,6 +11,8 @@ import java.util.ArrayList;
 
 public class GestorEventos {
 
+    private Evento eventoSeleccionado;
+
     public boolean agregarEvento(DtoEventos dtoEventos) {
         return false;
     }
@@ -29,5 +31,13 @@ public class GestorEventos {
 
     public boolean agregarReporte(DtoReporte dtoReporte) {
         return false;
+    }
+
+    public void setEventoSeleccionado(Evento eventoSeleccionado){
+        this.eventoSeleccionado = eventoSeleccionado;
+    }
+
+    public Evento getEventoSeleccionado(){
+        return this.eventoSeleccionado;
     }
 }
