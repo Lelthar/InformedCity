@@ -20,7 +20,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="vista.InicioSesion">
+        <activity
+            android:name="vista.InicioSesion"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,6 +46,11 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name="vista.DatosEventos"></activity>
+
+        <activity
+            android:name="vista.Registro"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="vista.AjustesCuenta"></activity>
     </application>
 
 </manifest>
