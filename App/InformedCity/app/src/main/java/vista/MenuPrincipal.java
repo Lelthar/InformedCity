@@ -85,9 +85,10 @@ public class MenuPrincipal extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         listaEventos = new ArrayList<>();
-        cargarEventos();
+        cargarEventosActuales();
+        cargarEventosFuturos();
         //PARA EL MAPA
-
+        Singleton.getInstance().getControlador().setListaEventos(listaEventos);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.mapPrincipal);
@@ -189,8 +190,13 @@ public class MenuPrincipal extends AppCompatActivity
                     Evento evento = listaEventos.get(i);
                     LatLng posicion = new LatLng(Float.parseFloat(evento.getPosicionX()), Float.parseFloat(evento.getPosicionY()));
                     MarkerOptions marca = new MarkerOptions();
-                    mMap.addMarker(new MarkerOptions().position(posicion).title(evento.getNombre()).snippet(evento.getCategoria())
-                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+                    if(evento.getTipo().equals("ACTUAL")){
+                        mMap.addMarker(new MarkerOptions().position(posicion).title(evento.getNombre()).snippet(evento.getCategoria())
+                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+                    }else {
+                        mMap.addMarker(new MarkerOptions().position(posicion).title(evento.getNombre()).snippet(evento.getCategoria())
+                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+                    }
                 }
 
                 LatLng currentLocation = new LatLng(location.getLatitude(), location.getLongitude());
@@ -228,8 +234,14 @@ public class MenuPrincipal extends AppCompatActivity
                     Evento evento = listaEventos.get(i);
                     LatLng posicion = new LatLng(Float.parseFloat(evento.getPosicionX()), Float.parseFloat(evento.getPosicionY()));
                     MarkerOptions marca = new MarkerOptions();
-                    mMap.addMarker(new MarkerOptions().position(posicion).title(evento.getNombre()).snippet(evento.getCategoria())
-                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+                    if(evento.getTipo().equals("ACTUAL")){
+                        mMap.addMarker(new MarkerOptions().position(posicion).title(evento.getNombre()).snippet(evento.getCategoria())
+                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+                    }else {
+                        mMap.addMarker(new MarkerOptions().position(posicion).title(evento.getNombre()).snippet(evento.getCategoria())
+                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+                    }
+
                 }
 
                 LatLng location = new LatLng(lastLocation.getLatitude(), lastLocation.getLongitude());
@@ -242,7 +254,7 @@ public class MenuPrincipal extends AppCompatActivity
         }
     }
 
-    public void cargarEventos() {
+    public void cargarEventosActuales() {
         try {
             JSONObject jsonParam = new JSONObject();
             String direccion = Singleton.getInstance().getControlador().getContext().getString(R.string.evento_actual)+".json";
@@ -261,13 +273,10 @@ public class MenuPrincipal extends AppCompatActivity
                 String descrpcion = marca.getString("descripcion");
                 float latitud = (float) marca.getDouble("posicion_x");
                 float longitud = (float) marca.getDouble("posicion_y");
-                //boolean disponible = (boolean) marca.getBoolean("disponible");
+                boolean disponible = (boolean) marca.getBoolean("disponible");
                 int reporte = marca.getInt("reportes");
                 int verificacion = marca.getInt("verificacion");
                 String fecha = marca.getString("created_at");
-
-                //Toast.makeText(this,id+"|"+nombre+"|"+categoria+"|"+descrpcion+"|"+latitud+"|"+longitud+"|"+reporte+"|"+verificacion
-                        //+"|"+fecha,Toast.LENGTH_LONG).show();
 
                 Evento evento = new Evento();
                 evento.setIdEvento(id);
@@ -278,6 +287,58 @@ public class MenuPrincipal extends AppCompatActivity
                 evento.setGetPosicionY(Float.toString(longitud));
                 evento.setReportes(reporte);
                 evento.setVerificaciones(verificacion);
+                evento.setTipo("ACTUAL");
+                evento.setDisponible(disponible);
+                //evento.setFechaPublicacion("fecha");
+                listaEventos.add(evento);
+
+            }
+        } catch (InterruptedException e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+        } catch (ExecutionException e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void cargarEventosFuturos() {
+        try {
+            JSONObject jsonParam = new JSONObject();
+            String direccion = Singleton.getInstance().getControlador().getContext().getString(R.string.evento_futuro)+".json";
+            String tipo = "GET";
+            String resultado = Singleton.getInstance().getControlador().getDaoApi().consultaApi(direccion, tipo, jsonParam);
+
+            JSONArray marcas = new JSONArray(resultado);
+
+            for(int i= 0;i<marcas.length();i++){
+                String valorJson = marcas.getString(i);
+                JSONObject marca = new JSONObject(valorJson);
+
+                int id=marca.getInt("id");
+                String nombre = marca.getString("nombre_evento");
+                String categoria = marca.getString("categoria");
+                String descrpcion = marca.getString("descripcion");
+                float latitud = (float) marca.getDouble("posicion_x");
+                float longitud = (float) marca.getDouble("posicion_y");
+                boolean disponible = (boolean) marca.getBoolean("disponible");
+                int reporte = marca.getInt("reportes");
+                int verificacion = marca.getInt("verificacion");
+                String fecha = marca.getString("created_at");
+                String fechaP = marca.getString("fecha");
+
+                Evento evento = new Evento();
+                evento.setIdEvento(id);
+                evento.setNombre(nombre);
+                evento.setCategoria(categoria);
+                evento.setDescripcion(descrpcion);
+                evento.setPosicionX(Float.toString(latitud));
+                evento.setGetPosicionY(Float.toString(longitud));
+                evento.setReportes(reporte);
+                evento.setVerificaciones(verificacion);
+                evento.setDisponible(disponible);
+                evento.setTipo("FUTURO");
+                evento.setFechaProgramada(fechaP);
                 //evento.setFechaPublicacion("fecha");
                 listaEventos.add(evento);
 

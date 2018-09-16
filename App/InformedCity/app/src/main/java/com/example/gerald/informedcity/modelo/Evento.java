@@ -19,6 +19,8 @@ public class Evento {
     private String  tipo;
     private int reportes;
     private int verificaciones;
+    private String fechaProgramada;
+    private boolean disponible;
 
     public Evento() {
         idEvento=-1;
@@ -32,6 +34,8 @@ public class Evento {
         tipo="";
         reportes=0;
         verificaciones=0;
+        fechaProgramada="";
+        disponible=true;
     }
 
 
@@ -122,5 +126,21 @@ public class Evento {
 
     public void setVerificaciones(int verificaciones) {
         this.verificaciones = verificaciones;
+    }
+
+    public String getFechaProgramada(){
+        return this.fechaProgramada;
+    }
+
+    public void setFechaProgramada(String fechaProgramada){
+        this.fechaProgramada=fechaProgramada;
+    }
+
+    public void setDisponible(boolean disponible){
+        this.disponible=disponible;
+    }
+
+    public boolean getDisponible(){
+        return this.disponible;
     }
 }
