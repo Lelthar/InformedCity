@@ -28,9 +28,9 @@ public class DatosEventos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_datos_eventos);
 
-        editTextNombre = findViewById(R.id.editTextDEName);
+        editTextNombre = findViewById(R.id.editTextREName);
         editTextCategoria = findViewById(R.id.editTextDECategory);
-        editTextDescripcion = findViewById(R.id.editTextDEDescription);
+        editTextDescripcion = findViewById(R.id.editTextREdescription);
         editTextFechaPubli = findViewById(R.id.editTextDEPubDate);
         editTextFechaProgra = findViewById(R.id.editTextDESchDate);
         textViewEstado = findViewById(R.id.textViewDEestado);

@@ -76,4 +76,13 @@
     <string name="comment_input">Entry a comment</string>
     <string name="no_comments">There are no comments</string>
 
+    <!--- Ventana Reportar Evento -->
+    <string name="report_event_report">Report</string>
+    <string name="report_event_reason">Reason for report</string>
+    <string name="report_event_comment">Comment</string>
+    <string name="report_event_description">Description</string>
+    <string name="report_event_accept">Accept</string>
+    <string name="report_event_cancel">Cancel</string>
+
+
 </resources>
