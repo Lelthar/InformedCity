@@ -82,7 +82,6 @@ public class Comentarios extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_comentarios, container, false);
-        //texto_ingredientes.setMovementMethod(new ScrollingMovementMethod());
         labelNoComentarios = rootView.findViewById(R.id.labelNoComentarios);
         listaComentarios = rootView.findViewById(R.id.listComentarios);
         comentario = rootView.findViewById(R.id.commentario_entry);
@@ -122,13 +121,13 @@ public class Comentarios extends Fragment {
                 direccion = getResources().getString(R.string.comentario_evento_futuro);
             }
             JSONObject json_parametros = new JSONObject();
-            String resultado = Singleton.getInstance().getControlador().getDaoApi().consultaApi(direccion+".json","GET",json_parametros);
+            String resultado = Singleton.getInstance().getControlador().getDaoApi().consultaApi(direccion,"GET",json_parametros);
 
             this.todosComentarios = new JSONArray(resultado);
 
             direccion = getResources().getString(R.string.users);
 
-            resultado = Singleton.getInstance().getControlador().getDaoApi().consultaApi(direccion+".json","GET",json_parametros);
+            resultado = Singleton.getInstance().getControlador().getDaoApi().consultaApi(direccion,"GET",json_parametros);
             this.todosUsuarios = new JSONArray(resultado);
         } catch (InterruptedException e) {
             Toast.makeText(this.getContext(), e.toString(), Toast.LENGTH_SHORT).show();
