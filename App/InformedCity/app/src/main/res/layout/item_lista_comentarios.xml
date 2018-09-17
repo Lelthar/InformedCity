@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/nombre_usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:layout_toLeftOf="@+id/imageViewFoto"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="10dp"/>
+
+
+            <TextView
+                android:id="@+id/comentario_usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="4"
+                android:scrollbars="vertical"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="40dp" />
+
+            <ImageView
+                android:id="@+id/imageViewFoto"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@android:color/darker_gray"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="20dp" />
+
+        </android.support.constraint.ConstraintLayout>
+    </TableRow>
+</TableLayout>

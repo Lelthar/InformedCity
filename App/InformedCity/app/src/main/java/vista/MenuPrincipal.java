@@ -175,7 +175,7 @@ public class MenuPrincipal extends AppCompatActivity
                 if(!marcaSeleccionada.equals("Usted está acá")){
                     Evento evento = buscarEvento(marcaSeleccionada);
                     Singleton.getInstance().getControlador().getGestorEventos().setEventoSeleccionado(evento);
-                    Intent intent = new Intent(getApplicationContext(), DatosEventos.class);
+                    Intent intent = new Intent(getApplicationContext(), TabEventos.class);
                     startActivity(intent);
                 }
                 return false;

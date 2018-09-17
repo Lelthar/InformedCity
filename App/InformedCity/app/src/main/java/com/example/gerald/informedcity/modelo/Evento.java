@@ -143,4 +143,8 @@ public class Evento {
     public boolean getDisponible(){
         return this.disponible;
     }
+
+    public void agregarComentario(Comentario comentario) {
+        this.comentarios.add(comentario);
+    }
 }

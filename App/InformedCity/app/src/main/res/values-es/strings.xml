@@ -28,13 +28,13 @@
 
     <!--- Ventana Datos Evento -->
     <string name="event_data_titule">Información de evento</string>
-    <string name="event_data_name">Nombre</string>
-    <string name="event_data_category">Categoria</string>
+    <string name="event_data_name">Nombre:</string>
+    <string name="event_data_category">Categoria:</string>
     <string name="event_data_report">Reportar</string>
     <string name="event_data_check">Verificar</string>
     <string name="event_data_comments">Cometarios</string>
-    <string name="event_data_date_create">Fecha publicación</string>
-    <string name="event_data_date_future">Fecha programada</string>
+    <string name="event_data_date_create">Fecha publicación:</string>
+    <string name="event_data_date_future">Fecha programada:</string>
     <string name="event_data_description">Descripción</string>
 
     <!--- Ventana Registro -->
@@ -52,4 +52,13 @@
     <string name="app_apellidos_ajustes">Apellidos</string>
     <string name="app_nombre_usuario_ajustes">Nombre de Usuario</string>
 
+    <!--- Ventana TabEventos -->
+    <string name="tab1">Informacion</string>
+    <string name="tab2">Comentarios</string>
+    <string name="verificado">Verificado</string>
+    <string name="no_verificado">No verificado</string>
+
+    <!--- Ventana Comentarios -->
+    <string name="comment_input">Escrita un comentario</string>
+    <string name="no_comments">No hay comentarios</string>
 </resources>

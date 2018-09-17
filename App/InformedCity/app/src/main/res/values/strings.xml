@@ -39,13 +39,13 @@
 
     <!--- Ventana Datos Evento -->
     <string name="event_data_titule">Event information</string>
-    <string name="event_data_name">Name</string>
-    <string name="event_data_category">Category</string>
+    <string name="event_data_name">Name:</string>
+    <string name="event_data_category">Category:</string>
     <string name="event_data_report">Report</string>
     <string name="event_data_check">Check</string>
     <string name="event_data_comments">Comments</string>
-    <string name="event_data_date_create">Publication date</string>
-    <string name="event_data_date_future">Scheduled date</string>
+    <string name="event_data_date_create">Publication date:</string>
+    <string name="event_data_date_future">Scheduled date:</string>
     <string name="event_data_description">Description</string>
 
     <!--- Ventana Registro -->
@@ -62,5 +62,18 @@
     <string name="app_nombre_ajustes">Name</string>
     <string name="app_apellidos_ajustes">Lastname</string>
     <string name="app_nombre_usuario_ajustes">Nickname</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--- Ventana TabEventos -->
+    <string name="tab1">Information</string>
+    <string name="tab2">Comments</string>
+    <string name="verificado">Checked</string>
+    <string name="no_verificado">Not checked</string>
+
+    <!--- Ventana Comentarios -->
+    <string name="comment_input">Entry a comment</string>
+    <string name="no_comments">There are no comments</string>
 
 </resources>

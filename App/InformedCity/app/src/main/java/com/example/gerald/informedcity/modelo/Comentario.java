@@ -6,10 +6,11 @@ package com.example.gerald.informedcity.modelo;
 
 public class Comentario {
     private int idComentario;
-    private String motivo;
     private String comentario;
+    private Usuario usuario;
 
     public Comentario() {
+        setUsuario(new Usuario());
     }
 
     public int getIdComentario() {
@@ -20,19 +21,19 @@ public class Comentario {
         this.idComentario = idComentario;
     }
 
-    public String getMotivo() {
-        return motivo;
-    }
-
-    public void setMotivo(String motivo) {
-        this.motivo = motivo;
-    }
-
     public String getComentario() {
         return comentario;
     }
 
     public void setComentario(String comentario) {
         this.comentario = comentario;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }
