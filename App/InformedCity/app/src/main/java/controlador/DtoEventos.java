@@ -64,7 +64,7 @@ public class DtoEventos {
         this.posicionX = posicionX;
     }
 
-    public String getGetPosicionY() {
+    public String getPosicionY() {
         return getPosicionY;
     }
 

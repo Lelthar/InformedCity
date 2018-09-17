@@ -51,7 +51,8 @@
             android:windowSoftInputMode="stateHidden" />
         <activity android:name="vista.AjustesCuenta" />
         <activity android:name="vista.TabEventos" />
-        <activity android:name="vista.ReportarEvento"></activity>
+        <activity android:name="vista.ReportarEvento" />
+        <activity android:name="vista.AgregarEventoActual"></activity>
     </application>
 
 </manifest>

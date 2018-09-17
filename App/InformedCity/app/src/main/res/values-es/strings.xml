@@ -70,4 +70,12 @@
     <string name="report_event_accept">Aceptar</string>
     <string name="report_event_cancel">Cancelar</string>
 
+    <!--- Ventana Agregar evento actual-->
+    <string name="titulo_agregar_evento_actual">Crear Evento Actual</string>
+    <string name="nombre_agregar_evento_actual">Nombre Evento</string>
+    <string name="categoria_agregar_evento_actual">Categoria</string>
+    <string name="descripcion_agregar_evento_actual">Descripción</string>
+    <string name="ubicacion_agregar_evento_actual">Ubicación</string>
+    <string name="boton_agregar_evento_actual">Crear</string>
+
 </resources>

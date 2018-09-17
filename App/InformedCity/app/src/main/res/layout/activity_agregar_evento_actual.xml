@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vista.AgregarEventoActual">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titulo_crear_evento_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="50dp"
+                android:includeFontPadding="false"
+                android:text="@string/titulo_agregar_evento_actual"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/nombre_edit_text_evento_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titulo_crear_evento_a"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="@string/nombre_agregar_evento_actual"
+                android:inputType="textMultiLine"
+                android:textAlignment="center"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/categoria_evento_actual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/nombre_edit_text_evento_a"
+                android:text="@string/categoria_agregar_evento_actual"
+                android:textSize="18dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinner_evento_actual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black"
+                android:layout_toRightOf="@+id/categoria_evento_actual"
+                android:layout_below="@+id/nombre_edit_text_evento_a"
+                android:textSize="18dp"
+                android:textStyle="normal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentRight="true"
+                android:ems="10" />
+
+            <EditText
+                android:id="@+id/descripcion_agregar_evento_actual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:maxLines="4"
+                android:inputType="textMultiLine"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:ems="10"
+                android:layout_below="@+id/categoria_evento_actual"
+                android:hint="@string/descripcion_agregar_evento_actual"
+                />
+
+            <TextView
+                android:id="@+id/ubicacion_evento_actual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/descripcion_agregar_evento_actual"
+                android:text="@string/ubicacion_agregar_evento_actual"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                />
+
+            <Button
+                android:id="@+id/btn_ubicacion_evento_actual"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/ubicacion_evento_actual"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@android:drawable/ic_menu_mylocation" />
+
+            <Button
+                android:id="@+id/create_evento_actual"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btn_ubicacion_evento_actual"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorButtons"
+                android:text="@string/boton_agregar_evento_actual"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
