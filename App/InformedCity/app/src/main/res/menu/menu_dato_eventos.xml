@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_event_date_report"
+        android:orderInCategory="100"
+        android:title="@string/event_data_report"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_event_date_check"
+        android:orderInCategory="100"
+        android:title="@string/event_data_check"
+        app:showAsAction="never" />
+
+</menu>

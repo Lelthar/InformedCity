@@ -1,7 +1,5 @@
 package vista;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -73,9 +71,9 @@ public class fInformacionEvento extends Fragment {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_informacion_evento, container, false);
 
-        editTextNombre = rootView.findViewById(R.id.editTextDEName);
+        editTextNombre = rootView.findViewById(R.id.editTextREName);
         editTextCategoria = rootView.findViewById(R.id.editTextDECategory);
-        editTextDescripcion = rootView.findViewById(R.id.editTextDEDescription);
+        editTextDescripcion = rootView.findViewById(R.id.editTextREdescription);
         editTextFechaPubli = rootView.findViewById(R.id.editTextDEPubDate);
         editTextFechaProgra = rootView.findViewById(R.id.editTextDESchDate);
         textViewEstado = rootView.findViewById(R.id.textViewDEestado);

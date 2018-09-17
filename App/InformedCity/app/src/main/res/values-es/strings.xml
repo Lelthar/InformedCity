@@ -61,4 +61,13 @@
     <!--- Ventana Comentarios -->
     <string name="comment_input">Escrita un comentario</string>
     <string name="no_comments">No hay comentarios</string>
+
+    <!--- Ventana Reportar Evento -->
+    <string name="report_event_report">Reportar</string>
+    <string name="report_event_reason">Motivo del reporte</string>
+    <string name="report_event_comment">Comentario</string>
+    <string name="report_event_description">Descripción</string>
+    <string name="report_event_accept">Aceptar</string>
+    <string name="report_event_cancel">Cancelar</string>
+
 </resources>

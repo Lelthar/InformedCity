@@ -30,7 +30,7 @@
                 android:textStyle="normal" />
 
             <TextView
-                android:id="@+id/textViewDEn"
+                android:id="@+id/textViewREn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -40,10 +40,10 @@
                 tools:layout_editor_absoluteY="93dp" />
 
             <EditText
-                android:id="@+id/editTextDEName"
+                android:id="@+id/editTextREName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textViewDEn"
+                android:layout_alignBaseline="@+id/textViewREn"
                 android:layout_alignStart="@+id/editTextDECategory"
                 android:ems="10"
                 android:focusable="false"
@@ -68,7 +68,7 @@
                 android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/textViewREco"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -79,14 +79,14 @@
                 android:id="@+id/editTextDEPubDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textView8"
+                android:layout_alignBaseline="@+id/textViewREco"
                 android:layout_alignStart="@+id/editTextDESchDate"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:focusable="false"/>
 
             <EditText
-                android:id="@+id/editTextDEDescription"
+                android:id="@+id/editTextREdescription"
                 android:layout_width="299dp"
                 android:layout_height="80dp"
                 android:layout_above="@+id/textViewScDate"
