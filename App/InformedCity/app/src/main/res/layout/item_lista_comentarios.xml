@@ -27,7 +27,7 @@
 
             <LinearLayout
                 android:layout_width="319dp"
-                android:layout_height="98dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
@@ -35,8 +35,8 @@
                     android:id="@+id/nombre_usuario"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
                     android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
                     android:text=""
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
@@ -47,8 +47,8 @@
                     android:id="@+id/comentario_usuario"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
                     android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
                     android:maxLines="4"
                     android:text=""
                     android:textColor="@android:color/black"
@@ -60,8 +60,8 @@
                     android:id="@+id/fecha_public"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
                     android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
                     android:maxLines="4"
                     android:text=""
                     android:textColor="@android:color/black"
