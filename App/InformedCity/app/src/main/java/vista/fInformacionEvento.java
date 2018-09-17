@@ -86,7 +86,7 @@ public class fInformacionEvento extends Fragment {
         editTextFechaPubli.setText(evento.getFechaPublicacion());
         editTextDescripcion.setText(evento.getDescripcion());
 
-        if(evento.getDisponible()){
+        if(evento.getVerificaciones()>=8){
             textViewEstado.setText(rootView.getResources().getString(R.string.verificado));
         }else{
             textViewEstado.setText(rootView.getResources().getString(R.string.no_verificado));
