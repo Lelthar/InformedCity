@@ -9,9 +9,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.gerald.informedcity.R;
 import com.example.gerald.informedcity.modelo.Evento;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
 
 import controlador.Singleton;
 
@@ -65,7 +71,7 @@ public class TabEventos extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_event_date_check) {
-
+            enviarVerificacion();
             return true;
         }else if(id == R.id.action_event_date_report){
             Intent intent = new Intent(getApplicationContext(),ReportarEvento.class);
@@ -75,5 +81,30 @@ public class TabEventos extends AppCompatActivity {
 
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void enviarVerificacion(){
+        JSONObject jsonParam = new JSONObject();
+        Evento evento = Singleton.getInstance().getControlador().getGestorEventos().getEventoSeleccionado();
+        String direccion="";
+        try {
+            int check = evento.getVerificaciones()+1;
+            jsonParam.put("verificacion",check);
+            if(evento.getTipo().equals("ACTUAL")){
+                direccion = Singleton.getInstance().getControlador().getContext().getString(R.string.evento_actual);
+            }else {
+                direccion = Singleton.getInstance().getControlador().getContext().getString(R.string.evento_futuro);
+            }
+            direccion+="/"+String.valueOf(evento.getIdEvento());
+            String tipo = "PATCH";
+            String resultado = Singleton.getInstance().getControlador().getDaoApi().consultaApi(direccion, tipo, jsonParam);
+            Toast.makeText(this,resultado,Toast.LENGTH_LONG) .show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 }
