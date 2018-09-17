@@ -92,6 +92,8 @@ public class Comentarios extends Fragment {
             public void onClick(View v) {
                 try {
                     AgregarComentario();
+                    comentario.setText("");
+                    actualizarComentarios();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 } catch (ExecutionException e) {
@@ -120,15 +122,17 @@ public class Comentarios extends Fragment {
             } else {
                 direccion = getResources().getString(R.string.comentario_evento_futuro);
             }
+            direccion+=".json";
             JSONObject json_parametros = new JSONObject();
             String resultado = Singleton.getInstance().getControlador().getDaoApi().consultaApi(direccion,"GET",json_parametros);
 
             this.todosComentarios = new JSONArray(resultado);
 
-            direccion = getResources().getString(R.string.users);
+            direccion = getResources().getString(R.string.users)+".json";
 
             resultado = Singleton.getInstance().getControlador().getDaoApi().consultaApi(direccion,"GET",json_parametros);
             this.todosUsuarios = new JSONArray(resultado);
+
         } catch (InterruptedException e) {
             Toast.makeText(this.getContext(), e.toString(), Toast.LENGTH_SHORT).show();
         } catch (ExecutionException e) {
@@ -158,11 +162,11 @@ public class Comentarios extends Fragment {
                 }
                 for (int i = 0; i < datosComentarios.length(); i++) {
                     JSONObject elemento = datosComentarios.getJSONObject(i);
-                    if (elemento.getString(idTipo).equals(evento.getIdEvento())) {
+                    if (elemento.getInt(idTipo)==evento.getIdEvento()) {
                         comentariosFiltrados.put(elemento);
                     }
-                }
 
+                }
                 if (comentariosFiltrados != null) {
                     if (comentariosFiltrados.length() > 0) {
                         labelNoComentarios.setVisibility(View.INVISIBLE);
@@ -170,6 +174,7 @@ public class Comentarios extends Fragment {
                         List<String> nicks = new ArrayList<>();
                         List<String> comentarios = new ArrayList<>();
                         List<String> imagenes = new ArrayList<>();
+                        List<String> fechas= new ArrayList<>();
 
                         JSONObject elemento;
 
@@ -182,20 +187,23 @@ public class Comentarios extends Fragment {
                                 if (elemento.get("user_id").equals(usuario.get("id"))){
                                     nicks.add(usuario.getString("nickname"));
                                     imagenes.add(usuario.getString("image"));
+
                                     break;
                                 }
                             }
 
                             comentarios.add(elemento.getString("texto_comentario"));
+                            fechas.add(elemento.getString("created_at"));
                         }
 
 
                         String[] Nicks = nicks.toArray(new String[0]);
                         String[] Comentarios = comentarios.toArray(new String[0]);
                         String[] Imagenes = imagenes.toArray(new String[0]);
+                        String[] Fechas = fechas.toArray(new String[0]);
 
 
-                        CustomListComentarios customListComentarios = new CustomListComentarios(getActivity(), Comentarios, Nicks,Imagenes);
+                        CustomListComentarios customListComentarios = new CustomListComentarios(getActivity(), Comentarios, Nicks,Imagenes,Fechas);
 
                         listaComentarios.setAdapter(customListComentarios);
                     } else

@@ -17,14 +17,16 @@ public class CustomListComentarios extends ArrayAdapter {
     private String[] Nick;
     private String[] Comentario;
     private String[] imagenes;
+    private String[] Fechas;
 
 
-    public CustomListComentarios(Activity context, String[] Comentario, String[] Nick, String[] Imagenes) {
+    public CustomListComentarios(Activity context, String[] Comentario, String[] Nick, String[] Imagenes,String[] Fechas) {
         super(context, R.layout.item_lista_comentarios, Nick);
         this.context = context;
         this.Comentario = Comentario;
         this.Nick = Nick;
         this.imagenes = Imagenes;
+        this.Fechas=Fechas;
     }
 
 
@@ -34,9 +36,11 @@ public class CustomListComentarios extends ArrayAdapter {
         View rowView = inflater.inflate(R.layout.item_lista_comentarios, null, true);
         TextView lbNick = rowView.findViewById(R.id.nombre_usuario);
         TextView lbComentario = rowView.findViewById(R.id.comentario_usuario);
+        TextView lbFecha = rowView.findViewById(R.id.fecha_public);
 
         lbNick.setText(Nick[position]);
         lbComentario.setText(Comentario[position]);
+        lbFecha.setText(Fechas[position]);
 
         return rowView;
     }
