@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.gerald.informedcity.R;
@@ -36,6 +37,7 @@ public class AgregarEventoActual extends AppCompatActivity {
     private EditText descripcion;
     private Button btnUbicacion;
     private Button btnCrear;
+    private TextView textView;
 
     public String[] datos;
 
@@ -49,6 +51,7 @@ public class AgregarEventoActual extends AppCompatActivity {
         descripcion = findViewById(R.id.descripcion_agregar_evento_actual);
         btnUbicacion = findViewById(R.id.btn_ubicacion_evento_actual);
         btnCrear = findViewById(R.id.create_evento_actual);
+        textView = findViewById(R.id.ubicacion_actual_evento_actual);
 
         datos = new String[] {"Robo o Asalto", "Accidente de Tránsito", "Congestión Vial", "Descarrilamiento de Tren", "Incendio", "Personas Misteriosas en la Zona", "Pleitos o Peleas",
                 "Derrumbes", "Inundaciones", "Caída de Objeto", "Persona Desaparecida", "Mascota Desaparecida", "Apagón", "Sin Agua Potable", "Espectáculo en Vía Pública", "Bloqueo de Vía", "Otros"};
@@ -82,13 +85,14 @@ public class AgregarEventoActual extends AppCompatActivity {
 
                 //agregar coordenadas
                 latLng = place.getLatLng();
+                textView.setText(latLng.toString());
             }
 
         }
     }
 
     public void guardarEvento(View view) throws JSONException, ExecutionException, InterruptedException {
-
+        Toast.makeText(this,"Se creó el evento",Toast.LENGTH_SHORT).show();
         if (latLng != null) {
             String titulo_evento = nombre.getText().toString();
             Spinner spinnerCategoria = findViewById(R.id.spinner_evento_actual);

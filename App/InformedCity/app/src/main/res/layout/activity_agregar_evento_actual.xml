@@ -99,11 +99,22 @@
                 android:textAlignment="center"
                 />
 
+            <TextView
+                android:id="@+id/ubicacion_actual_evento_actual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/ubicacion_evento_actual"
+                android:text=""
+                android:textSize="18dp"
+                android:textAlignment="center"
+                />
+
             <Button
                 android:id="@+id/btn_ubicacion_evento_actual"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_below="@+id/ubicacion_evento_actual"
+                android:layout_below="@+id/ubicacion_actual_evento_actual"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:background="@android:drawable/ic_menu_mylocation"
@@ -118,6 +129,7 @@
                 android:layout_marginBottom="40dp"
                 android:layout_marginTop="40dp"
                 android:background="@color/colorButtons"
+                android:onClick="guardarEvento"
                 android:text="@string/boton_agregar_evento_actual"
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />
