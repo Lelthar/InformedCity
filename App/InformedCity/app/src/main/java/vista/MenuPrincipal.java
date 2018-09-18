@@ -137,7 +137,8 @@ public class MenuPrincipal extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
-
+            Intent intent = new Intent(getApplicationContext(),AcercaDe.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
         }

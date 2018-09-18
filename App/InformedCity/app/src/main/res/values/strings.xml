@@ -92,4 +92,16 @@
     <string name="ubicacion_agregar_evento_actual">Location</string>
     <string name="boton_agregar_evento_actual">Create</string>
 
+    <!--- Ventana Reportar Evento -->
+    <string name="about_title">About</string>
+    <string name="about_students">Students</string>
+    <string name="about_student1">Marlon Reyes Montero</string>
+    <string name="about_student2">Gerald Morales Alvarado</string>
+    <string name="about_student3">Gabriel Ramírez Ramírez</string>
+    <string name="about_course">Course</string>
+    <string name="about_ap">Project management</string>
+    <string name="about_teacher">Teacher</string>
+    <string name="about_prof">Jaime Solano Soto</string>
+    <string name="about_feria">Trade fairs for business ideas, Cartago 2018</string>
+    <string name="about_acept">Accept</string>
 </resources>

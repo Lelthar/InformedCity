@@ -78,4 +78,16 @@
     <string name="ubicacion_agregar_evento_actual">Ubicación</string>
     <string name="boton_agregar_evento_actual">Crear</string>
 
+    <!--- Ventana Reportar Evento -->
+    <string name="about_title">Acerca de</string>
+    <string name="about_students">Estudiantes</string>
+    <string name="about_student1">Marlon Reyes Montero</string>
+    <string name="about_student2">Gerald Morales Alvarado</string>
+    <string name="about_student3">Gabriel Ramírez Ramírez</string>
+    <string name="about_course">Curso</string>
+    <string name="about_ap">Administración de proyectos</string>
+    <string name="about_teacher">Profesor</string>
+    <string name="about_prof">Jaime Solano Soto</string>
+    <string name="about_feria">Feria de ideas de Negocios, Cartago 2018</string>
+    <string name="about_acept">Aceptar</string>
 </resources>
