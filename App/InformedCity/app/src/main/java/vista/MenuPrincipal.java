@@ -131,9 +131,12 @@ public class MenuPrincipal extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            listaEventos.clear();
+            cargarEventosActuales();
+            cargarEventosFuturos();
         } else if (id == R.id.nav_gallery) {
-
+            Intent inten = new Intent(getApplicationContext(),AgregarEventoActual.class);
+            startActivity(inten);
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
