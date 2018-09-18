@@ -106,7 +106,8 @@
                 android:layout_below="@+id/ubicacion_evento_actual"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:background="@android:drawable/ic_menu_mylocation" />
+                android:background="@android:drawable/ic_menu_mylocation"
+                android:onClick="goPlacePicker" />
 
             <Button
                 android:id="@+id/create_evento_actual"
