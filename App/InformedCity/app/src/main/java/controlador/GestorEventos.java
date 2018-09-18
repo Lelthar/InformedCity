@@ -29,6 +29,8 @@ public class GestorEventos {
         }
         //:nombre_evento, :categoria, :descripcion, :posicion_x, :posicion_y, :disponible, :reportes, :verificacion
 
+        int user_id = Singleton.getInstance().getControlador().getUsuario().getIdUsuario();
+
         JSONObject jsonParam = new JSONObject();
         jsonParam.put("nombre_evento", dtoEventos.getNombre());
         jsonParam.put("categoria", dtoEventos.getCategoria());
@@ -38,6 +40,7 @@ public class GestorEventos {
         jsonParam.put("disponible", true);
         jsonParam.put("reportes", dtoEventos.getReportes());
         jsonParam.put("verificacion", dtoEventos.getVerificaciones());
+        jsonParam.put("user_id", user_id);
 
         String resultado = Singleton.getInstance().getControlador().getDaoApi().consultaApi(direccion,"POST",jsonParam);
 

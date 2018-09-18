@@ -68,7 +68,7 @@ public class DtoEventos {
         return getPosicionY;
     }
 
-    public void setGetPosicionY(String getPosicionY) {
+    public void setPosicionY(String getPosicionY) {
         this.getPosicionY = getPosicionY;
     }
 

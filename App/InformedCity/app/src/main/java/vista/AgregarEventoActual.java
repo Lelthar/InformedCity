@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.gerald.informedcity.R;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
@@ -19,6 +20,11 @@ import com.google.android.gms.maps.model.LatLng;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
+
+import controlador.DtoEventos;
+import controlador.Singleton;
 
 public class AgregarEventoActual extends AppCompatActivity {
 
@@ -81,37 +87,37 @@ public class AgregarEventoActual extends AppCompatActivity {
         }
     }
 
-    public void GuardarEvento(View view) throws JSONException {
+    public void guardarEvento(View view) throws JSONException, ExecutionException, InterruptedException {
 
-        String titulo_evento = nombre.getText().toString();
-        Spinner spinnerCategoria = findViewById(R.id.spinner_evento_actual);
-        int ind = spinnerCategoria.getSelectedItemPosition();
-        String categoria_evento = datos[ind];
-        String descripcion_evento = descripcion.getText().toString();
-        Float lat = convertToFloat(latLng.latitude);
-        Float lon = convertToFloat(latLng.longitude);
+        if (latLng != null) {
+            String titulo_evento = nombre.getText().toString();
+            Spinner spinnerCategoria = findViewById(R.id.spinner_evento_actual);
+            int ind = spinnerCategoria.getSelectedItemPosition();
+            String categoria_evento = datos[ind];
+            String descripcion_evento = descripcion.getText().toString();
+            Float lat = convertToFloat(latLng.latitude);
+            Float lon = convertToFloat(latLng.longitude);
 
-        //:nombre_evento, :categoria, :descripcion, :posicion_x, :posicion_y, :disponible, :reportes, :verificacion
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("nombre_evento",titulo_evento);//str
-        jsonObject.put("descripcion",txtDescripcion.getText().toString());//str
-        jsonObject.put("latitud",lat);//float
-        jsonObject.put("longitud",lon);//float
-        jsonObject.put("user_id",Integer.parseInt(datosJson.getString("id")));
-        jsonObject.put("title",titulito);
+            DtoEventos dtoEventos = new DtoEventos();
+            dtoEventos.setNombre(titulo_evento);
+            dtoEventos.setCategoria(categoria_evento);
+            dtoEventos.setDescripcion(descripcion_evento);
+            dtoEventos.setPosicionX(lat.toString());
+            dtoEventos.setPosicionY(lon.toString());
+            dtoEventos.setReportes(0);
+            dtoEventos.setVerificaciones(0);
+            dtoEventos.setTipo("ACTUAL");
 
-        String result="";
-        //
-        try {
-            result = conexion.execute("https://informedcityapp.herokuapp.com/events","POST",jsonObject.toString()).get();
-            Toast.makeText(this,result,Toast.LENGTH_SHORT).show();
-            onBackPressed();
-        } catch (InterruptedException e) {
-            Toast.makeText(this,e.toString(),Toast.LENGTH_SHORT).show();
-            Toast.makeText(this,e.toString(),Toast.LENGTH_SHORT).show();
-        } catch (ExecutionException e) {
-            Toast.makeText(this,e.toString(),Toast.LENGTH_SHORT).show();
+            if (Singleton.getInstance().getControlador().getGestorEventos().agregarEvento(dtoEventos)){
+                Toast.makeText(this,"Se creó el evento",Toast.LENGTH_SHORT).show();
+                onBackPressed();
+            } else {
+                Toast.makeText(this,"No se creó el evento",Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(this,"Necesita seleccionar una ubicación",Toast.LENGTH_SHORT).show();
         }
+
 
 
     }
