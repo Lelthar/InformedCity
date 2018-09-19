@@ -92,17 +92,7 @@
     <string name="ubicacion_agregar_evento_actual">Location</string>
     <string name="boton_agregar_evento_actual">Create</string>
 
-    <!--- Ventana Agregar evento futuro-->
-    <string name="titulo_agregar_evento_futuro">Create Future Event</string>
-    <string name="nombre_agregar_evento_futuro">Name</string>
-    <string name="categoria_agregar_evento_futuro">Category</string>
-    <string name="descripcion_agregar_evento_futuro">Description</string>
-    <string name="ubicacion_agregar_evento_futuro">Location</string>
-    <string name="boton_agregar_evento_futuro">Create</string>
-    <string name="fecha_agregar_evento_futuro">Date</string>
-    <string name="hora_agregar_evento_futuro">Time</string>
-
-    <!--- Ventana Reportar Evento -->
+    <!--- Ventana Acerca De -->
     <string name="about_title">About</string>
     <string name="about_students">Students</string>
     <string name="about_student1">Marlon Reyes Montero</string>
@@ -114,4 +104,11 @@
     <string name="about_prof">Jaime Solano Soto</string>
     <string name="about_feria">Trade fairs for business ideas, Cartago 2018</string>
     <string name="about_acept">Accept</string>
+
+    <!--- Ventana Muro Empresas -->
+    <string name="companies_wall">Companies Wall</string>
+    <string name="wall_acept">Accept</string>
+    <string name="wall_comp1">The ICE reports the following events.</string>
+    <string name="wall_comp2">The AyA reports the following events.</string>
+    <string name="wall_comp3">The Police reports the following events.</string>
 </resources>
