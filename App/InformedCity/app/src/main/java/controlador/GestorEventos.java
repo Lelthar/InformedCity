@@ -40,6 +40,9 @@ public class GestorEventos {
         jsonParam.put("disponible", true);
         jsonParam.put("reportes", dtoEventos.getReportes());
         jsonParam.put("verificacion", dtoEventos.getVerificaciones());
+        if( dtoEventos.getTipo().equals("FUTURO") ) {
+            jsonParam.put("fecha", dtoEventos.getFechaPublicacion());
+        }
         jsonParam.put("user_id", user_id);
 
         String resultado = Singleton.getInstance().getControlador().getDaoApi().consultaApi(direccion,"POST",jsonParam);

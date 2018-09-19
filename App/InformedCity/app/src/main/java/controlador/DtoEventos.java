@@ -13,7 +13,7 @@ public class DtoEventos {
     private String nombre;
     private String categoria;
     private String descripcion;
-    private Date fechaPublicacion;
+    private String fechaPublicacion;
     private String posicionX;
     private String getPosicionY;
     private ArrayList<Comentario> comentarios;
@@ -48,11 +48,11 @@ public class DtoEventos {
         this.descripcion = descripcion;
     }
 
-    public Date getFechaPublicacion() {
+    public String getFechaPublicacion() {
         return fechaPublicacion;
     }
 
-    public void setFechaPublicacion(Date fechaPublicacion) {
+    public void setFechaPublicacion(String fechaPublicacion) {
         this.fechaPublicacion = fechaPublicacion;
     }
 
