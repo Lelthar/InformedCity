@@ -110,6 +110,8 @@
                 android:background="@color/colorButtons"
                 android:textAlignment="center"
                 android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
                 />
 
             <TextView

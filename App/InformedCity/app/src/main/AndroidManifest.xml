@@ -54,7 +54,8 @@
         <activity android:name="vista.ReportarEvento" />
         <activity android:name="vista.AgregarEventoActual" />
         <activity android:name="vista.MuroEmpresas" />
-        <activity android:name="vista.AcercaDe"></activity>
+        <activity android:name="vista.AcercaDe"/>
+        <activity android:name="vista.AgregarEventoFuturo"/>
     </application>
 
 </manifest>

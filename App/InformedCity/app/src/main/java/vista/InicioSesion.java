@@ -79,8 +79,8 @@ public class InicioSesion extends AppCompatActivity {
     }
 
     public void registro() {
-        //Intent intent= new Intent(InicioSesion.this, Registro.class);
-        Intent intent= new Intent(InicioSesion.this, AgregarEventoActual.class);
+        Intent intent= new Intent(InicioSesion.this, Registro.class);
+        //Intent intent= new Intent(InicioSesion.this, AgregarEventoActual.class);
         startActivity(intent);
     }
 

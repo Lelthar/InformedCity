@@ -111,4 +111,15 @@
     <string name="wall_comp1">The ICE reports the following events.</string>
     <string name="wall_comp2">The AyA reports the following events.</string>
     <string name="wall_comp3">The Police reports the following events.</string>
+
+    <!--- Ventana Agregar evento futuro-->
+    <string name="titulo_agregar_evento_futuro">Create Future Event</string>
+    <string name="nombre_agregar_evento_futuro">Name</string>
+    <string name="categoria_agregar_evento_futuro">Category</string>
+    <string name="descripcion_agregar_evento_futuro">Description</string>
+    <string name="ubicacion_agregar_evento_futuro">Location</string>
+    <string name="boton_agregar_evento_futuro">Create</string>
+    <string name="fecha_agregar_evento_futuro">Date</string>
+    <string name="hora_agregar_evento_futuro">Time</string>
+
 </resources>
