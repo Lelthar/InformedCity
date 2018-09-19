@@ -184,7 +184,7 @@ public class AgregarEventoFuturo extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker datePicker, int mYear, int mMonth, int mDay) {
                 dia = mDay;
-                mes = mMonth;
+                mes = mMonth+1;
                 anho = mYear;
                 fechaTextView.setText(dia+"/"+mes+"/"+anho);
             }
