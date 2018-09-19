@@ -143,7 +143,8 @@ public class MenuPrincipal extends AppCompatActivity
             Intent intent = new Intent(getApplicationContext(),AcercaDe.class);
             startActivity(intent);
         } else if (id == R.id.nav_share) {
-
+            Intent wall = new Intent(getApplicationContext(),MuroEmpresas.class);
+            startActivity(wall);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
