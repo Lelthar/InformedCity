@@ -33,7 +33,7 @@
 
             <TextView
                 android:id="@+id/textViewREn"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/editTextREName"
                 android:layout_alignStart="@+id/editTextREdescription"
@@ -44,7 +44,7 @@
 
             <TextView
                 android:id="@+id/textViewREnombre"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
@@ -54,7 +54,7 @@
 
             <EditText
                 android:id="@+id/editTextREName"
-                android:layout_width="282dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignStart="@+id/textViewREco"
@@ -64,7 +64,7 @@
 
             <TextView
                 android:id="@+id/textViewREco"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignStart="@+id/textViewREn"
@@ -73,44 +73,42 @@
 
             <EditText
                 android:id="@+id/editTextREdescription"
-                android:layout_width="309dp"
+                android:layout_width="match_parent"
                 android:layout_height="97dp"
-                android:layout_alignParentEnd="true"
                 android:layout_below="@+id/textViewREco"
-                android:layout_marginEnd="25dp"
+                android:layout_centerHorizontal="true"
                 android:ems="10"
                 android:hint="@string/event_data_description"
                 android:inputType="textPersonName" />
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="430dp" />
 
             <Button
                 android:id="@+id/buttonREaccept"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/textViewREn"
-                android:layout_alignParentBottom="true"
                 android:background="@color/colorButtons"
+                android:layout_below="@+id/editTextREdescription"
                 android:text="@string/report_event_accept"
+                android:layout_marginStart="100dp"
+                android:layout_marginRight="10dp"
                 android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/buttonREcancel"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/editTextREdescription"
                 android:layout_marginEnd="64dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorButtons"
                 android:text="@string/report_event_cancel"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="100dp"
                 android:textColor="@android:color/white"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/buttonREaccept"/>
 
 
         </RelativeLayout>
