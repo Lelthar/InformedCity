@@ -17,6 +17,7 @@
     <string name="reportes_evento_actual">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/report_current_events</string>
     <string name="reportes_evento_futuro">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/report_future_events</string>
     <string name="user_login">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/auth/sign_in</string>
+    <string name="instituciones">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/institutions</string>
 
     <!--- Ventana Menu principal -->
     <string name="title_activity_menu_principal">Informed City</string>

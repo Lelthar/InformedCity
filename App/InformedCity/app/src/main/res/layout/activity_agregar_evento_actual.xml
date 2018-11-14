@@ -85,7 +85,7 @@
                 android:textAlignment="center"
                 android:ems="10"
                 android:layout_below="@+id/categoria_evento_actual"
-                android:hint="@string/descripcion_agregar_evento_actual"
+                android:hint="@string/report_event_description"
                 />
 
             <TextView

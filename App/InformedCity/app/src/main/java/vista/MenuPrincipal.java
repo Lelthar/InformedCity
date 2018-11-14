@@ -118,6 +118,9 @@ public class MenuPrincipal extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent= new Intent(MenuPrincipal.this, AjustesCuenta.class);
+            intent.putExtra("tipo","ajuste");
+            startActivity(intent);
             return true;
         }
 

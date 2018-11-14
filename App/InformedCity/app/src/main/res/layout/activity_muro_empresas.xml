@@ -32,82 +32,14 @@
                     android:textSize="30sp"
                     android:textStyle="normal" />
 
-                <ImageView
-                    android:id="@+id/imageICE"
-                    android:layout_width="80dp"
-                    android:layout_height="55dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="35dp"
-                    android:adjustViewBounds="true"
-                    android:cropToPadding="true"
-                    app:srcCompat="@drawable/logo_ice"
-                    />
-
-                <TextView
-                    android:id="@+id/textView1"
+                <ListView
+                    android:id="@+id/list_view"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/wall_comp1"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:textStyle="normal" />
+                    android:layout_height="447dp" /><![CDATA[
 
-                <ImageView
-                    android:id="@+id/imageAyA"
-                    android:layout_width="80dp"
-                    android:layout_height="55dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="20dp"
-                    android:adjustViewBounds="true"
-                    android:cropToPadding="true"
-                    app:srcCompat="@drawable/aya_logo"
-                    />
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/wall_comp2"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:textStyle="normal" />
+                />
 
-                <ImageView
-                    android:id="@+id/imagePoli"
-                    android:layout_width="80dp"
-                    android:layout_height="55dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="20dp"
-                    android:adjustViewBounds="true"
-                    android:cropToPadding="true"
-                    app:srcCompat="@drawable/logo_poli"/>
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/wall_comp3"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:textStyle="normal" />
-
-                <Button
-                    android:id="@+id/buttonWallAcept"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="140dp"
-                    android:layout_marginTop="45dp"
-                    android:background="@color/colorButtons"
-                    android:text="@string/wall_acept"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold" />
-                    />
-
+            ]]>
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>

@@ -19,6 +19,7 @@
     <string name="user_login">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/auth/sign_in</string>
     <string name="user_register">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/auth/</string>
     <string name="users">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/users</string>
+    <string name="instituciones">http://informed-city-env.ptkfheyfpn.us-east-1.elasticbeanstalk.com/institutions</string>
 
     <!--- Ventana Menu principal -->
     <string name="title_activity_menu_principal">Informed City</string>

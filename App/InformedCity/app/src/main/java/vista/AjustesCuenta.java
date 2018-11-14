@@ -51,6 +51,25 @@ public class AjustesCuenta extends AppCompatActivity {
 
             }
         });
+
+        if(!tipo.equals("registro")) {
+            String nombre_usuario = Singleton.getInstance().getControlador().getUsuario().getNombre();
+            String apellidos_usuario = Singleton.getInstance().getControlador().getUsuario().getApellidos();
+            String nickName_usuario = Singleton.getInstance().getControlador().getUsuario().getUserName();
+
+            nombre.setText(nombre_usuario);
+            nickname.setText(nickName_usuario);
+            apellidos.setText(apellidos_usuario);
+
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
     public void modificarCuenta() throws InterruptedException, ExecutionException, JSONException {
